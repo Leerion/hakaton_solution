@@ -1,0 +1,30 @@
+import "base.proto";
+import "facttypes_base.proto";
+
+
+
+
+message Harvest: NFactType.TFact
+{
+   required string Month = 1;
+}
+
+message Soil: NFactType.TFact
+{
+   required string Type = 1;
+}
+
+message Farm: NFactType.TFact
+{
+   required string National = 1;
+}
+
+message Med: NFactType.TFact
+{
+   required string Drug = 1;
+}
+
+message Needs: NFactType.TFact
+{
+   required string Amount = 1;
+}

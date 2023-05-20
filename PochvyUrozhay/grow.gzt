@@ -1,0 +1,9 @@
+encoding "utf8";
+
+import "kwtypes.proto";
+
+grow "созревают"
+{
+    key = "созревают"
+    key = "созревание"
+}

@@ -1,0 +1,35 @@
+encoding "utf8";
+
+import "base.proto";
+import "articles_base.proto";
+import "fact_types.proto";
+
+import "kwtypes.proto";
+import "grow.gzt";
+import "farm.gzt";
+
+
+TAuxDicArticle "урожай"
+{
+    key = {"tomita:harvest.cxx" type=CUSTOM}
+}
+
+TAuxDicArticle "почва"
+{
+    key = {"tomita:soil.cxx" type=CUSTOM}
+}
+
+TAuxDicArticle "фармокопея"
+{
+    key = {"tomita:farm.cxx" type=CUSTOM}
+}
+
+TAuxDicArticle "препарат"
+{
+    key = {"tomita:med.cxx" type=CUSTOM}
+}
+
+TAuxDicArticle "потребность"
+{
+    key = {"tomita:needs.cxx" type=CUSTOM}
+}

@@ -1,0 +1,13 @@
+encoding "utf8";
+
+import "kwtypes.proto";
+
+farm "государственная"
+{
+    key = "Государственной"
+}
+
+farm "РФ"
+{
+    key = "Российской Федерации"
+}

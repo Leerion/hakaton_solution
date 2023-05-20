@@ -1,0 +1,51 @@
+encoding "utf8";
+
+TTextMinerConfig {
+	Dictionary = "dic.gzt";
+	
+	Input = {File = "inputPlants.txt"}
+	
+	Output = {File = "output.txt" 
+			Format = text}
+////////////////////////////////////
+	Articles = [
+		{ Name = "урожай" }
+		]
+    Facts = [
+            { Name = "Harvest"}
+            ]
+/////////////////////////////////
+	Articles = [
+		{ Name = "почва" }
+		]
+    Facts = [
+            { Name = "Soil"}
+            ]
+    //PrettyOutput = "pretty.html"
+
+/////////////////////////////////
+	Articles = [
+		{ Name = "фармокопея" }
+		]
+    Facts = [
+            { Name = "Farm"}
+            ]
+    //PrettyOutput = "pretty.html"
+
+/////////////////////////////////
+	Articles = [
+		{ Name = "препарат" }
+		]
+    Facts = [
+            { Name = "Med"}
+            ]
+    //PrettyOutput = "pretty.html"
+/////////////////////////////////
+	Articles = [
+		{ Name = "потребность" }
+		]
+    Facts = [
+            { Name = "Needs"}
+            ]
+    PrettyOutput = "pretty.html"
+}

@@ -1,0 +1,28 @@
+encoding "utf8"; // указываем кодировку, в которой написан конфигурационный файл
+
+TTextMinerConfig {
+  Dictionary = "dicLocs.gzt"; // путь к корневому словарю
+  
+  PrettyOutput = "PrettyOutput.html"; // путь к файлу с отладочным выводом в удобном для чтения виде
+
+  Input = {
+    File = "inputPlants.txt"; // путь к входному файлу
+  }
+
+  Articles = [
+    { Name = "регион" } // название статьи в корневом словаре,
+                      // которая содержит запускаемую грамматику
+  ]
+
+  Facts = [
+    { Name = "region" }
+  ]
+
+  Output = {
+    File = "facts.xml";
+    Format = xml;        // можно использовать следующие форматы:
+                          // proto (Google Protobuf), xml, text
+  }
+
+  PrettyOutput = "pretty.html"
+}

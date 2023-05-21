@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+
+</head>
+
+
+<body class="bg-light">
+
+    <div class="container">
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h2 id="plant-name"></h2>
+        <p id="plant-description" class="card"></p>
+		<p id="plant-areal" class="card"></p>
+		<p id="plant-ecology" class="card"></p>
+		<p id="plant-sources" class="card"></p>
+		<p id="plant-property" class="card"></p>
+		<p id="plant-farm" class="card"></p>
+		<p id="plant-medicine" class="card"></p>
+      </div>
+    </div>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script type="text/javascript" language="javascript" src="data.json"></script> 
+
+<script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+const name = urlParams.get('name')
+
+function getKeyByValue(object, value) {
+  return Object.keys(object).find(key => object[key] === value);
+}
+
+index = getKeyByValue(data.name,name);
+
+document.getElementById("plant-name").innerHTML = data.name[index]
+document.getElementById("plant-description").innerHTML = '<b>Описание:</b>' + data.Описание[index]
+document.getElementById("plant-areal").innerHTML = '<b>Ареал:</b>' + data.Ареал[index]
+
+document.getElementById("plant-ecology").innerHTML = '<b>Экология:</b>' + data.Экология[index]
+
+document.getElementById("plant-sources").innerHTML = '<b>Ресурсы:</b>' + data.Ресурсы[index]
+
+document.getElementById("plant-property").innerHTML = '<b>Состав:</b>' + data.Состов[index]
+
+document.getElementById("plant-farm").innerHTML = '<b>Фармакология:</b>' + data.Фармакология[index]
+
+document.getElementById("plant-medicine").innerHTML = '<b>Медицина:</b>' + data.Медицина[index]
+
+document.getElementById("plant-description").innerHTML = '<b>Описание:</b>' + data.Описание[index]
+</script>
+
+</html>

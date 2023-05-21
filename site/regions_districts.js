@@ -108,9 +108,17 @@ function init() {
                 content = document.getElementById("balloon-card")
                 content.children[0].innerHTML = "Информация о регионе " + target.properties._data.hintContent;
                 contentInfo = document.getElementById("content-info")
-                // console.log(target.properties._data.hintContent)
+                var contentHTML = "<ul>"
+
+                plants[target.properties._data.hintContent].forEach(element => {
+                    // print(element)
+                    contentHTML += '<li><a href="/plant.html?name='+element+'">'+element +'</a></li>'
+                });
+
+                contentHTML += '</ul>'
+                // console.log(plants[target.properties._data.hintContent])
                 // contentInfo.innerHTML = district.properties.districts.join('<br>');
-                content.children[2].innerHTML = "<b>В данному округе произрастают такие целебные растения, как:</b><br/>" + plants[target.properties._data.hintContent].join('<br>');
+                content.children[2].innerHTML = "<b>В данному округе произрастают такие целебные растения, как:</b><br/>" + contentHTML;
                 // Откроем балун в точке клика. В балуне будут перечислены регионы того федерального округа,
                 // по которому кликнул пользователь.
                 districtBalloon.open(event.get('coords'), content.innerHTML
